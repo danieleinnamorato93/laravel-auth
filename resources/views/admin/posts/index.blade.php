@@ -53,8 +53,8 @@
   </table>
 </div>
 </div>
-</div>
-@endsection
-    @section("additional-scripts")
-        @vite("resources/js/posts/delete-confirmation.js");
-    @endsection
+            </div>
+              @endsection
+                  @section("additional-scripts")
+                      @vite("resources/js/posts/delete-confirmation.js");
+                  @endsection
