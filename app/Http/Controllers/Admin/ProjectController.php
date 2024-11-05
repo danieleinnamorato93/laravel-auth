@@ -23,7 +23,7 @@ class ProjectController extends Controller
      */
     public function create()
     {
-        $projects=[];
+      
         return view("admin.projects.create", compact("projects"));
     }
 

@@ -23,23 +23,24 @@
       </tr>
     </thead>
     <tbody>
-       {{--   @forelse ($project as $index => $project)
+       @forelse ($projects as $index => $project)
             
        
       <tr>
         <td>{{$project->id}}</td>
         <td>{{$project->title}}</td>
         <td>{{$project->content}}</td>
+        <td>{{$project->url}}</td>
     
         <td>
-            <a href="{{route("admin.posts.show", $project)}}" class="btn btn-sm btn-primary m-2 me-1 m-1">Show</a>
-            {{--<a href="{{route("admin.posts.edit", $guitar->id)}}" class="btn btn-sm btn-success m-2 me-1">Edit</a>
-            <form action="{{route("admin.posts.delete", $guitar->id)}}" method="POST" class="guitar-destroyer" custom-data-name="{{$guitar->title}}">
+            <a href="{{route("admin.projects.show", $project)}}" class="btn btn-sm btn-primary m-2 me-1 m-1">Show</a>
+  {{--             <a href="{{route("admin.projects.edit", $project->id)}}" class="btn btn-sm btn-success m-2 me-1">Edit</a>
+            <form action="{{route("admin.projects.delete", $project->id)}}" method="POST" class="guitar-destroyer" custom-data-name="{{$project->title}}">
               @csrf
               @method("DELETE")
 
             <button type="submit" class="btn btn-sm btn-warning m-2">DELETE</button>
-            </form> 
+            </form>  --}}
           </td>
       </tr>
     
@@ -51,7 +52,7 @@
             
       @endforelse
     </tbody>
-  </table> ---}}
+  </table> 
 </div>
 </div>
             </div> 
