@@ -6,17 +6,7 @@
 
 <div class="container">
       <div class="row justify-content-center">
-        @if($errors->any())
-        <div class="alert alert-warning">
-            <ul>
-                @foreach($errors->all() as $error)
-                <li>
-                    {{$error}}
-                </li>
-                @endforeach
-            </ul>
-        </div>
-        @endif
+      
 
         <form class="col-12  card p-4" method="POST" action="{{route("admin.projects.store")}}">
             @csrf
