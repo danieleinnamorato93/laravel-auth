@@ -69,7 +69,7 @@ class ProjectController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        $formdata = $request->validate([
+        $projectData=$request->validate([
             "title"=>"required|max:255|min:3|string|",
             "content"=>"required|max:255|min:3|string|",
             "url"=>"required|url",
@@ -78,8 +78,9 @@ class ProjectController extends Controller
             "content.required"=>"La descrizione è necessaria",
             "url.required"=>"L' URL è  necessario",
         ]);
-        $projectData = $request->all();
-        $project = Project::create($projectData);
+      
+        $project = Project::findOrFail($id);
+        $project->update($projectData);
         return redirect()->route("admin.projects.index");
     }
 

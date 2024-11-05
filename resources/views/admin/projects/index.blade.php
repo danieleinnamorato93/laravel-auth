@@ -17,6 +17,7 @@
       <tr>
         <th scope="col">#</th>
         <th scope="col">Titolo</th>
+        <th scope="col">Descrizione</th>
         <th scope="col">Url</th>
         <th scope="col">Actions</th>
         
@@ -34,8 +35,8 @@
     
         <td>
             <a href="{{route("admin.projects.show", $project)}}" class="btn btn-sm btn-primary m-2 me-1 m-1">Show</a>
-              <a href="{{route("admin.projects.edit", $project->id)}}" class="btn btn-sm btn-success m-2 me-1">Edit</a>
-            <form action="{{route("admin.projects.delete", $project->id)}}" method="POST" class="guitar-destroyer" custom-data-name="{{$project->title}}">
+              <a href="{{route("admin.projects.edit", $project)}}" class="btn btn-sm btn-success m-2 me-1">Edit</a>
+            <form action="{{route("admin.projects.delete", $project)}}" method="POST" class="guitar-destroyer" custom-data-name="{{$project->title}}">
               @csrf
               @method("DELETE")
 

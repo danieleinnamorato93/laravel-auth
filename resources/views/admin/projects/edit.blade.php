@@ -45,7 +45,7 @@
                 </div>
                
            <div class="mb-3 d-flex justify-content-center align-items-center">
-            <button type="submit" class="btn btn-primary">Crea il tuo nuovo progetto!</button>
+            <button type="submit" class="btn btn-primary">Edita il progetto!</button>
             <button type="reset" class="btn btn-danger">Pulisci i campi</button>
 
            </div>
