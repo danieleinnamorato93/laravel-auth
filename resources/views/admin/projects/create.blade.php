@@ -18,7 +18,7 @@
         </div>
         @endif
 
-        <form class="col-12  card p-4" method="POST" action="{{route("project.store")}}">
+        <form class="col-12  card p-4" method="POST" action="{{route("admin.projects.store")}}">
             @csrf
             <h1Project Create:</h1>
     
