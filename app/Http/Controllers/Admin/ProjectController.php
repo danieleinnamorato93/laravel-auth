@@ -24,7 +24,7 @@ class ProjectController extends Controller
     public function create()
     {
       
-        return view("admin.projects.create", compact("projects"));
+        return view("admin.projects.create",);
     }
 
     /**
@@ -32,8 +32,17 @@ class ProjectController extends Controller
      */
     public function store(Request $request)
     {
-        $data = $request->validated();
-        $project = Project::create();
+        $formdata = $request->validate([
+            "title"=>"required|max:255|min:3|string|",
+            "content"=>"required|max:255|min:3|string|",
+            "url"=>"required|url",
+        ],[
+            "title.required"=>"Il titolo è necessario",
+            "content.required"=>"La descrizione è necessaria",
+            "url.required"=>"L' URL è  necessario",
+        ]);
+        $projectData = $request->all();
+        $project = Project::create($projectData);
         return redirect()->route("admin.projects.index");
     }
 
@@ -51,7 +60,8 @@ class ProjectController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $project = Project::findOrFail($id);
+        return view("admin.projects.edit", compact("project"));
     }
 
     /**
@@ -59,7 +69,18 @@ class ProjectController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $formdata = $request->validate([
+            "title"=>"required|max:255|min:3|string|",
+            "content"=>"required|max:255|min:3|string|",
+            "url"=>"required|url",
+        ],[
+            "title.required"=>"Il titolo è necessario",
+            "content.required"=>"La descrizione è necessaria",
+            "url.required"=>"L' URL è  necessario",
+        ]);
+        $projectData = $request->all();
+        $project = Project::create($projectData);
+        return redirect()->route("admin.projects.index");
     }
 
     /**
