@@ -2,7 +2,7 @@
 
 @section("page-title")
 
-@section("main-content")
+@section("content")
 
 <div class="container">
       <div class="row justify-content-center">
@@ -28,10 +28,29 @@
                 <div class="mb-3">
                     <label for="project-title" class="form-label">Titolo</label>
                     <input type="text" class="form-control" id="project-title" name="title" value="{{old('title')}}">
+                    @error("title")
+                    <div class="alert alert-danger">
+                        {{$message}}
+                    </div>
+                @enderror
                 </div>
                 <div class="mb-3">
                     <label for="project-content" class="form-label">Contenuto</label>
                     <input type="text" class="form-control" id="project-content" name="content" value="{{old('content')}}">
+                    @error("content")
+                    <div class="alert alert-danger">
+                        {{$message}}
+                    </div>
+                @enderror
+                </div>
+                <div class="mb-3">
+                    <label for="project-url" class="form-label">Url</label>
+                    <input type="text" class="form-control" id="project-url" name="url" value="{{old('url')}}">
+                    @error("url")
+                    <div class="alert alert-danger">
+                        {{$message}}
+                    </div>
+                @enderror
                 </div>
                
            <div class="mb-3 d-flex justify-content-center align-items-center">

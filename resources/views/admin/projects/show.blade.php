@@ -11,10 +11,10 @@
         <div class="card col-2  m-3">
             
             <div class="card-body">
-           {{--    <img src="{{}}" alt=""> --}}
+
               <h5 class="card-title">Progetto: {{$project->title}}</h5>
               <h5 class="card-title">Descrizione: {{$project->content}}</h5>
-              <h5 class="card-title">Link: {{$project->url}}</h5>
+              Link: <a href="{{ $project->url }}" target="_blank">{{ $project->url }}</a>
       
           
 
