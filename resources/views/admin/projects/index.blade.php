@@ -34,13 +34,13 @@
     
         <td>
             <a href="{{route("admin.projects.show", $project)}}" class="btn btn-sm btn-primary m-2 me-1 m-1">Show</a>
-  {{--             <a href="{{route("admin.projects.edit", $project->id)}}" class="btn btn-sm btn-success m-2 me-1">Edit</a>
+              <a href="{{route("admin.projects.edit", $project->id)}}" class="btn btn-sm btn-success m-2 me-1">Edit</a>
             <form action="{{route("admin.projects.delete", $project->id)}}" method="POST" class="guitar-destroyer" custom-data-name="{{$project->title}}">
               @csrf
               @method("DELETE")
 
             <button type="submit" class="btn btn-sm btn-warning m-2">DELETE</button>
-            </form>  --}}
+            </form> 
           </td>
       </tr>
     

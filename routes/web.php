@@ -34,6 +34,7 @@ Route::get('/projects/create', [AdminProjectController::class, 'create'])->name(
 Route::get('/projects/{id}', [AdminProjectController::class, 'show'])->name('projects.show');
 Route::get("/projects/{id}/edit", [AdminProjectController::class, "edit"])->name("projects.edit");
 Route::put("/projects/{id}", [AdminProjectController::class, "update"])->name("projects.update");
+Route::delete("/projects/{id}", [AdminProjectController::class, "destroy"])->name("projects.delete");
 
 
 
